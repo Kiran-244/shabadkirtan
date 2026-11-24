@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #f2e8d8;
+  --paper: #fbf7f0;
+  --paper-deep: #eee1ce;
+  --gold: #a7834f;
+  --gold-dark: #80613b;
+  --ink: #40372e;
+  --muted: #827568;
+  --line: #dfcfb7;
+  --shadow: 0 18px 55px rgba(91, 67, 39, .09);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; min-height: 100vh; color: var(--ink); background: var(--bg);
+  font-family: "DM Sans", "Noto Sans Gurmukhi", sans-serif;
+  overflow-x: hidden;
+}
+button, input { font: inherit; }
+.ambient { position: fixed; width: 360px; height: 360px; border-radius: 50%; filter: blur(2px); pointer-events: none; opacity: .22; z-index: -1; }
+.ambient-one { top: -190px; right: -120px; background: #d7bd94; }
+.ambient-two { bottom: -220px; left: -140px; background: #dfc9a9; }
+.welcome { min-height: 100svh; display: grid; place-items: center; padding: 48px 22px; text-align: center; }
+.welcome-inner { width: min(100%, 720px); animation: rise .9s ease both; }
+.ek-onkar { color: var(--gold); font-family: "Noto Sans Gurmukhi", serif; font-size: clamp(3rem, 8vw, 5rem); line-height: 1.2; margin-bottom: 12px; }
+.eyebrow { color: var(--gold-dark); font-size: .7rem; letter-spacing: .22em; font-weight: 700; margin: 0 0 18px; }
+.intro-line { min-height: 2.1em; color: var(--muted); font-family: "Noto Sans Gurmukhi", serif; font-size: clamp(1rem, 2.5vw, 1.2rem); line-height: 1.8; margin: 0 auto 18px; }
+.intro-line::after { content: ""; display: inline-block; height: 1.1em; border-right: 1px solid var(--gold); margin-left: 4px; vertical-align: middle; animation: blink .8s steps(1) infinite; }
+h1 { margin: 0; font-family: "Noto Serif Gurmukhi", Georgia, serif; font-size: clamp(2.5rem, 8vw, 5.2rem); line-height: 1.12; letter-spacing: -.045em; font-weight: 500; }
+h1 span { color: var(--gold-dark); }
+.ornament { display: flex; align-items: center; justify-content: center; gap: 14px; color: var(--gold); margin: 28px auto 18px; }
+.ornament span { width: 64px; height: 1px; background: var(--line); }
+.ornament i { font-style: normal; font-size: .85rem; }
+.event-date { color: var(--gold-dark); font-size: .95rem; font-weight: 600; letter-spacing: .13em; margin: 0; }
+.welcome-note { color: var(--muted); margin: 15px 0 30px; font-size: .95rem; }
+.primary-button { border: 0; color: #fffaf2; background: var(--gold-dark); border-radius: 999px; padding: 15px 25px; min-height: 52px; cursor: pointer; box-shadow: 0 8px 22px rgba(128, 97, 59, .2); transition: transform .2s, background .2s; }
+.primary-button:hover { transform: translateY(-2px); background: #6f5231; }
+.primary-button span { margin-left: 10px; }
+.welcome-footer { margin-top: 48px; color: #a18d72; font-family: "Noto Sans Gurmukhi", serif; letter-spacing: .13em; font-size: .9rem; }
+.hidden { display: none !important; }
+.collection, .reader { width: min(100% - 36px, 790px); margin: 0 auto; padding: 54px 0 70px; animation: rise .5s ease both; }
+.collection-header { text-align: center; }
+.small-ek { color: var(--gold); font-family: "Noto Sans Gurmukhi", serif; font-size: 2.2rem; margin-bottom: 10px; }
+.collection-header .eyebrow { margin-bottom: 10px; }
+h2 { font-family: "Noto Serif Gurmukhi", Georgia, serif; font-weight: 500; }
+.collection-header h2 { font-size: clamp(2rem, 6vw, 3rem); margin: 0; }
+.collection-subtitle { color: var(--muted); margin: 12px 0 22px; font-size: .95rem; }
+.header-rule, .reader-rule { width: 76px; height: 1px; background: var(--gold); margin: 0 auto; }
+.search-wrap { display: flex; align-items: center; gap: 10px; margin: 32px 0 18px; padding: 0 17px; min-height: 52px; border: 1px solid var(--line); background: rgba(251,247,240,.72); border-radius: 14px; color: var(--gold-dark); }
+.search-wrap span { font-size: 1.5rem; }
+.search-wrap input { border: 0; outline: 0; background: transparent; width: 100%; color: var(--ink); font-size: .95rem; }
+.shabad-list { display: grid; gap: 11px; }
+.shabad-item { display: flex; align-items: center; gap: 16px; width: 100%; text-align: left; border: 1px solid rgba(190,166,131,.48); background: rgba(251,247,240,.78); border-radius: 15px; padding: 17px 18px; cursor: pointer; color: var(--ink); transition: transform .18s, border-color .18s, box-shadow .18s; }
+.shabad-item:hover { transform: translateY(-2px); border-color: var(--gold); box-shadow: 0 9px 24px rgba(91,67,39,.07); }
+.shabad-number { flex: 0 0 39px; height: 39px; display: grid; place-items: center; border-radius: 50%; background: var(--paper-deep); color: var(--gold-dark); font-size: .78rem; font-weight: 700; }
+.shabad-name { flex: 1; font-family: "Noto Sans Gurmukhi", sans-serif; font-size: clamp(1rem, 2.8vw, 1.15rem); line-height: 1.8; font-weight: 500; }
+.chevron { color: var(--gold); font-size: 1.25rem; }
+.list-footnote { color: var(--muted); text-align: center; font-size: .82rem; margin-top: 24px; }
+.back-button { border: 0; background: transparent; color: var(--gold-dark); padding: 8px 0 20px; cursor: pointer; font-weight: 600; }
+.back-button span { font-size: 1.2rem; margin-right: 7px; }
+.reader-card { background: rgba(251,247,240,.88); border: 1px solid var(--line); border-radius: 22px; padding: clamp(24px, 6vw, 52px); box-shadow: var(--shadow); text-align: center; }
+.reader-card .eyebrow { margin-bottom: 12px; }
+.reader-ornament { color: var(--gold); margin-bottom: 12px; }
+.reader-card h2 { font-family: "Noto Sans Gurmukhi", sans-serif; font-size: clamp(1.45rem, 4.5vw, 2rem); line-height: 1.65; margin: 0 auto 20px; }
+.reader-rule { margin-bottom: 28px; }
+.lyrics { white-space: pre-line; font-family: "Noto Sans Gurmukhi", sans-serif; font-size: clamp(1.15rem, 3.4vw, 1.38rem); line-height: 2.15; letter-spacing: .005em; color: #40372e; text-align: center; overflow-wrap: anywhere; }
+.lyrics p { margin: 0 0 17px; }
+.lyrics .highlight-line {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px 12px;
+  border-radius: 8px;
+  background: #ead7b7;
+  color: var(--gold-dark);
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 var(--gold);
+}
+.missing-note { margin: 24px 0 0; padding: 16px; border-radius: 12px; background: #f1e6d5; color: #6f5a40; line-height: 1.7; font-size: .9rem; }
+.bottom-back-button {
+  display: block;
+  margin: 30px auto 0;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold-dark);
+  border-radius: 999px;
+  padding: 12px 22px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background .2s, transform .2s;
+}
+.bottom-back-button span { margin-right: 7px; }
+.bottom-back-button:hover {
+  background: #f1e6d5;
+  transform: translateY(-1px);
+}
+.reader-footer { text-align: center; color: var(--gold-dark); font-family: "Noto Sans Gurmukhi", serif; margin: 25px 0 0; }
+.site-footer { text-align: center; padding: 18px 15px 26px; color: #98856d; font-size: .76rem; }
+.site-footer span { color: var(--gold); padding: 0 5px; }
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 520px) {
+  .welcome { padding: 36px 20px; }
+  .welcome-footer { margin-top: 36px; }
+  .collection, .reader { width: min(100% - 28px, 790px); padding-top: 34px; }
+  .shabad-item { gap: 12px; padding: 14px 13px; border-radius: 13px; }
+  .shabad-number { flex-basis: 34px; height: 34px; }
+  .reader-card { border-radius: 17px; }
+  .lyrics { line-height: 2.05; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f2e8d8">
+  <meta name="description" content="RainSabahi Shabad Kirtan — 24 November 2026. A collection of Shabads recited by students.">
+  <title>RainSabahi Shabad Kirtan | 24 November 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Gurmukhi:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main>
+    <section class="welcome" id="welcome" aria-labelledby="event-title">
+      <div class="welcome-inner">
+        <div class="ek-onkar" aria-hidden="true">ੴ</div>
+        <p class="eyebrow">WITH DIVINE BLESSINGS</p>
+        <p class="intro-line" id="typed-message" aria-live="polite"></p>
+        <h1 id="event-title">RainSabahi<br><span>Shabad Kirtan</span></h1>
+        <div class="ornament"><span></span><i>✦</i><span></span></div>
+        <p class="event-date">24 November 2026</p>
+        <p class="welcome-note">An evening of Gurbani, devotion and togetherness.</p>
+        <button class="primary-button" id="view-shabads">View Shabad Collection <span aria-hidden="true">↓</span></button>
+        <p class="welcome-footer">ਗੁਰਬਾਣੀ • ਕੀਰਤਨ • ਸਿਮਰਨ</p>
+      </div>
+    </section>
+
+    <section class="collection hidden" id="collection" aria-labelledby="collection-title">
+      <header class="collection-header">
+        <div class="small-ek">ੴ</div>
+        <p class="eyebrow">RAIN SABAHI · 24 NOVEMBER 2026</p>
+        <h2 id="collection-title">Shabad Collection</h2>
+        <p class="collection-subtitle">The Shabads to be recited by the students</p>
+        <div class="header-rule"></div>
+      </header>
+
+      
+
+      <div class="shabad-list" id="shabad-list"></div>
+      <p class="list-footnote">Tap any title to read the Shabad.</p>
+    </section>
+
+    <section class="reader hidden" id="reader" aria-live="polite">
+      <button class="back-button" id="back-button"><span aria-hidden="true">←</span> Back to Shabad Collection</button>
+      <div class="reader-card">
+        <p class="eyebrow" id="reader-number">SHABAD 01</p>
+        <div class="reader-ornament">✦</div>
+        <h2 id="reader-title"></h2>
+        <div class="reader-rule"></div>
+        <div class="lyrics" id="reader-lyrics"></div>
+        <p class="missing-note hidden" id="missing-note">The complete lyrics for this Shabad have not been added yet. They can be added in <strong>script.js</strong> when the exact Gurmukhi text is available.</p>
+        <button class="bottom-back-button" id="bottom-back-button"><span aria-hidden="true">←</span> Go Back to Shabad Collection</button>
+      </div>
+      <p class="reader-footer">ੴ ਸਤਿਗੁਰ ਪ੍ਰਸਾਦਿ ॥</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">Made with devotion <span>✦</span> RainSabahi Shabad Kirtan</footer>
+  <script src="script.js"></script>
+</body>
+</html>
